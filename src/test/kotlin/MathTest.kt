@@ -38,6 +38,13 @@ class MathTest {
         val actual = qsort(array.toList())
         actual shouldBe expected
     }
+
+    @Test
+    fun testDHKeyExchange(){
+        val (a, b, key) = dhKeyExchange(1024)
+        a shouldBe b
+        a shouldBe key
+    }
 }
 
 fun <T : Comparable<T>> qsort(array: List<T>): List<T> {

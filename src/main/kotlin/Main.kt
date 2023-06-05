@@ -2,7 +2,7 @@ import java.math.BigInteger
 import java.security.SecureRandom
 
 fun main() {
-    val key = measureTime("gen") { generateKeyPair(4096) }
+    val key = measureTime("gen") { generateKeyPair(1024) }
     println(key)
     val plain = 1234567890L
     val encrypted = measureTime("encrypt") { encrypt(plain.toBigInteger(), key) }
@@ -10,6 +10,8 @@ fun main() {
     println("plain: $plain")
     println("encrypted: $encrypted")
     println("decrypted: $decrypted")
+
+    println(dhKeyExchange(1024))
 }
 
 data class RSAKey(
