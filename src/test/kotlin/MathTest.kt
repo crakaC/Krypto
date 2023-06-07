@@ -40,7 +40,7 @@ class MathTest {
     }
 
     @Test
-    fun testDHKeyExchange(){
+    fun testDHKeyExchange() {
         val (a, b, key) = dhKeyExchange(1024)
         a shouldBe b
         a shouldBe key

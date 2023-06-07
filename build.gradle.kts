@@ -14,6 +14,8 @@ dependencies {
     testImplementation(kotlin("test"))
     testImplementation(platform("io.kotest:kotest-bom:5.6.2"))
     testImplementation("io.kotest:kotest-assertions-core")
+    testImplementation("io.kotest:kotest-property")
+    testImplementation("io.kotest:kotest-runner-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.3")
 }
 
